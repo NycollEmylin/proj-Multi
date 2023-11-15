@@ -1,0 +1,44 @@
+/* styles.css */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+.rectangle-9 {
+    width: 1400px;
+    height: 477px;
+    position: absolute;
+    left: -80px;
+    top: -89px;
+    overflow: visible;
+  }
+  .img-fluid{
+      width: 61% !important;
+  }
+  .line-1 {
+    width: 1490.49px;
+    height: 95.97px;
+    position: absolute;
+    left: -101px;
+    top: 395.75px;
+    transform: translate(101px, -395.75px);
+    overflow: visible;
+  }
+  @media (max-width: 767px) {
+}
+.rectangle-9 {
+  width: 430px;
+  height: 208.09px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+.img-fluid{
+    width: 100% !important;
+}
+.line-1 {
+  width: 479.97px;
+  height: 38.49px;
+  position: absolute;
+  left: -9.73px;
+  top: 215.97px;
+  transform: translate(9.73px, -197.29px);
+  overflow: visible;  
+}

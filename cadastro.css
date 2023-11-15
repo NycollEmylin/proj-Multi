@@ -1,0 +1,22 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+  @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+  .rectangle-9 {
+    width: 1400px;
+    height: 477px;
+    position: absolute;
+    left: -80px;
+    top: -89px;
+    overflow: visible;
+  }
+  .img-fluid{
+      width: 61% !important;
+  }
+  .line-1 {
+    width: 1490.49px;
+    height: 95.97px;
+    position: absolute;
+    left: -101px;
+    top: 395.75px;
+    transform: translate(101px, -395.75px);
+    overflow: visible;
+  }

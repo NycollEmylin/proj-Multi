@@ -1,0 +1,367 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+  @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+.login,
+.login * {
+  box-sizing: border-box;
+}
+.login {
+  background: #ffffff;
+  width: 100%;
+  height: 1024px;
+  position: relative;
+  overflow: hidden;
+}
+.help {
+  width: 147px;
+  height: 51px;
+  position: absolute;
+  left: 636px;
+  top: 884px;
+}
+.ajuda {
+  color: #000000;
+  text-align: left;
+  font: 600 20px "Lora-SemiBold", sans-serif;
+  position: absolute;
+  right: 0%;
+  left: 31.29%;
+  width: 68.71%;
+  bottom: -15.69%;
+  top: 15.69%;
+  height: 100%;
+}
+.question-help-square {
+  position: absolute;
+  inset: 0;
+}
+.question-help-square2 {
+  position: absolute;
+  right: 68.71%;
+  left: 14.29%;
+  width: 17.01%;
+  bottom: 33.33%;
+  top: 17.65%;
+  height: 49.02%;
+}
+.input-group {
+    width: 74% !important; 
+}
+.frame-20 {
+  width: 398px;
+  height: 565px;
+  position: absolute;
+  left: 501px;
+  top: 188px;
+  overflow: hidden;
+}
+.logo {
+  width: 80px;
+  height: 74px;
+  position: absolute;
+  left: 160px;
+  top: 12px;
+}
+.logo2 {
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  width: 119%;
+  bottom: 0%;
+  top: 0%;
+  height: 100%;
+}
+.seja-bem-vindo-a-de-volta {
+  color: #000000;
+  text-align: center;
+  font: 600 30px "Lora-SemiBold", sans-serif;
+  position: absolute;
+  left: 56px;
+  top: 98px;
+  width: 286px;
+  height: 51px;
+}
+.rectangle-9 {
+    width: 1400px;
+    height: 477px;
+    position: absolute;
+    left: -80px;
+    top: -89px;
+    overflow: visible;
+  }
+  .img-fluid{
+      width: 61% !important;
+  }
+  .line-1 {
+    width: 1490.49px;
+    height: 95.97px;
+    position: absolute;
+    left: -101px;
+    top: 395.75px;
+    transform: translate(101px, -395.75px);
+    overflow: visible;
+  }
+.rectangle-12 {
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 2px;
+  width: 295px;
+  height: 66px;
+  position: absolute;
+  left: 55px;
+  top: 212px;
+}
+.rectangle-13 {
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 2px;
+  width: 295px;
+  height: 66px;
+  position: absolute;
+  left: 56px;
+  top: 208px;
+}
+.rn {
+  color: #000000;
+  text-align: left;
+  font: 500 20px "Lora-Medium", sans-serif;
+  position: absolute;
+  left: 61px;
+  top: 229px;
+}
+.senha {
+  color: #000000;
+  text-align: left;
+  font: 500 20px "Lora-Medium", sans-serif;
+  position: absolute;
+  left: 62px;
+  top: 315px;
+}
+.esqueceu-a-senha {
+  color: #000000;
+  text-align: left;
+  font: 500 15px "Lora-Medium", sans-serif;
+  position: absolute;
+  left: 217px;
+  top: 367px;
+}
+.novo-aqui-crie-sua-conta {
+  color: #000000;
+  text-align: left;
+  font: 500 15px "Lora-Medium", sans-serif;
+  position: absolute;
+  left: 178px;
+  top: 502px;
+}
+.rectangle-10 {
+    background: #01c38e !important;
+    width: 295px;
+    height: 66px;
+    position: absolute;
+    top: 419px;
+    left: 59px;
+    border: none !important;
+    color: #000000;
+    text-align: left;
+    font: 500 25px "Lora-Medium", sans-serif !important;
+  }
+.login2 {
+  color: #000000;
+  text-align: left;
+  font: 500 30px "Lora-Medium", sans-serif;
+  position: absolute;
+  left: 157px;
+  top: 444px;
+  width: 83px;
+  height: 51px;
+}
+.rectangle-123 {
+  width: 1400px;
+  height: 477px;
+  position: absolute;
+  left: -357px;
+  top: -62px;
+  overflow: visible;
+}
+.line-2 {
+  width: 1490.49px;
+  height: 95.97px;
+  position: absolute;
+  left: -378px;
+  top: 422.75px;
+  transform: translate(378px, -422.75px);
+  overflow: visible;
+}
+
+@media (max-width: 767px) {
+.login,
+.login * {
+  box-sizing: border-box;
+}
+.img-fluid{
+    width: 100% !important;
+}
+.login {
+  background: #ffffff;
+  width: 430px;
+  height: 932px;
+  position: relative;
+  overflow: hidden;
+}
+.rectangle-9 {
+  width: 430px;
+  height: 208.09px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: visible;
+}
+.line-1 {
+  width: 479.97px;
+  height: 38.49px;
+  position: absolute;
+  left: -9.73px;
+  top: 215.97px;
+  transform: translate(9.73px, -197.29px);
+  overflow: visible;
+}
+.help {
+  width: 147px;
+  height: 51px;
+  position: absolute;
+  left: 139px;
+  top: 861px;
+}
+.ajuda {
+  color: #000000;
+  text-align: left;
+  font: 600 20px "Lora-SemiBold", sans-serif;
+  position: absolute;
+  right: 0%;
+  left: 31.29%;
+  width: 68.71%;
+  bottom: -15.69%;
+  top: 15.69%;
+  height: 100%;
+}
+.question-help-square {
+  position: absolute;
+  inset: 0;
+}
+.question-help-square2 {
+  position: absolute;
+  right: 68.71%;
+  left: 14.29%;
+  width: 17.01%;
+  bottom: 33.33%;
+  top: 17.65%;
+  height: 49.02%;
+}
+.frame-20 {
+  width: 398px;
+  height: 565px;
+  position: absolute;
+  left: 13px;
+  top: 157px;
+  overflow: hidden;
+}
+.logo {
+  width: 80px;
+  height: 74px;
+  position: absolute;
+  left: 160px;
+  top: 12px;
+}
+.logo2 {
+  position: absolute;
+  right: 0%;
+  left: 0%;
+  width: 119%;
+  bottom: 0%;
+  top: 0%;
+  height: 100%;
+}
+.seja-bem-vindo-a-de-volta {
+  color: #000000;
+  text-align: center;
+  font: 600 30px "Lora-SemiBold", sans-serif;
+  position: absolute;
+  left: 56px;
+  top: 98px;
+  width: 286px;
+  height: 51px;
+}
+.rectangle-12 {
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 2px;
+  width: 295px;
+  height: 66px;
+  position: absolute;
+  left: 55px;
+  top: 212px;
+}
+.rectangle-13 {
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 2px;
+  width: 295px;
+  height: 66px;
+  position: absolute;
+  left: 56px;
+  top: 211px;
+}
+.rn {
+  color: #000000;
+  text-align: left;
+  font: 500 20px "Lora-Medium", sans-serif;
+  position: absolute;
+  left: 61px;
+  top: 229px;
+}
+.senha {
+  color: #000000;
+  text-align: left;
+  font: 500 20px "Lora-Medium", sans-serif;
+  position: absolute;
+  left: 62px;
+  top: 315px;
+}
+.esqueceu-a-senha {
+  color: #000000;
+  text-align: left;
+  font: 500 15px "Lora-Medium", sans-serif;
+  position: absolute;
+  left: 217px;
+  top: 367px;
+}
+.novo-aqui-crie-sua-conta {
+  color: #000000;
+  text-align: left;
+  font: 500 15px "Lora-Medium", sans-serif;
+  position: absolute;
+  left: 178px;
+  top: 502px;
+}
+.rectangle-122 {
+  background: #01c38e;
+  width: 295px;
+  height: 66px;
+  position: absolute;
+  left: 56px;
+  top: 433px;
+}
+.login2 {
+  color: #000000;
+  text-align: left;
+  font: 500 30px "Lora-Medium", sans-serif;
+  position: absolute;
+  left: 157px;
+  top: 444px;
+  width: 83px;
+  height: 51px;
+}
+}
