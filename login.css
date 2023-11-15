@@ -96,48 +96,27 @@
     height: 95.97px;
     position: absolute;
     left: -101px;
-    top: 395.75px;
+    top: 322.75px;
     transform: translate(101px, -395.75px);
     overflow: visible;
   }
-.rectangle-12 {
-  border-radius: 10px;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 2px;
-  width: 295px;
-  height: 66px;
-  position: absolute;
-  left: 55px;
-  top: 212px;
-}
-.rectangle-13 {
-  border-radius: 10px;
-  border-style: solid;
-  border-color: #000000;
-  border-width: 2px;
-  width: 295px;
-  height: 66px;
-  position: absolute;
-  left: 56px;
-  top: 208px;
-}
-.rn {
-  color: #000000;
-  text-align: left;
-  font: 500 20px "Lora-Medium", sans-serif;
-  position: absolute;
-  left: 61px;
-  top: 229px;
-}
-.senha {
-  color: #000000;
-  text-align: left;
-  font: 500 20px "Lora-Medium", sans-serif;
-  position: absolute;
-  left: 62px;
-  top: 315px;
-}
+
+  .input-group-text{
+    font: 500 15px "Lora-SemiBold", sans-serif !important;
+
+    background-color: #01c38e !important;
+    border-radius: 0px !important;
+    margin: 0px !important;
+    border: 0px !important;
+  }
+  .input-btn{
+    border-style: solid;
+    border-color: #01c38e;
+    border-width: 2px;
+  }
+   .input-group{
+    border-radius: 6px !important;
+  } 
 .esqueceu-a-senha {
   color: #000000;
   text-align: left;
