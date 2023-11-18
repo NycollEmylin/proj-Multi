@@ -54,10 +54,6 @@
     margin-top: 208px;
     align-items: center;
   }
-  .btn-cadastrar{
-    margin-top: 1rem;
-    margin-left: 7rem;
-  }
   .input-btn{
     border-style: solid;
     border-color: #01c38e;
@@ -76,6 +72,19 @@
   } 
   .mt-5 {
     margin-top: 6rem!important;
+}
+a{
+  text-decoration: none;
+}
+button.btn.btn-outline-secondary.btn-cadastrar {
+    width: 100%;
+    border-radius: 0px;
+    border-color: #000000;
+    color: #000000;
+}
+button.btn.btn-outline-secondary.btn-cadastrar:hover {
+background-color: #000000;
+color: white;
 }
 @media (max-width: 767px) {
     .rectangle-9 {
