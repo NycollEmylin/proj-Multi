@@ -1,0 +1,65 @@
+.inicial-aluno,
+.inicial-aluno * {
+  box-sizing: border-box;
+}
+.inicial-aluno {
+  background: #ffffff;
+  width: 100%;
+  height: 1669px;
+  position: relative;
+  overflow: hidden;
+}
+  /* .ranking {
+    width: 1400px;
+    height: 524px;
+    position: absolute;
+    left: 0px;
+    top: 763px;
+    overflow: hidden;
+  }
+  .historico {
+      max-width: 50%;
+    height: 367px;
+    position: absolute;
+    left: 0px;
+    overflow: hidden;
+    top: 150px !important;
+  } */
+p.card-text{
+    width: 10%;
+}
+.cabe-alho {
+  width: 100%;
+  height: 396px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: hidden;
+}
+.rectangle-19 {
+  border-radius: 0px;
+  width: 1485px;
+  height: 394px;
+  position: absolute;
+  left: -99px;
+  top: -140px;
+  overflow: visible;
+}
+.pesquisa {
+  width: 100%;
+  height: 117px;
+  position: absolute;
+  top: 81px;
+  overflow: hidden;
+}
+.bg-light {
+    --bs-bg-opacity:0 !important;
+}
+.btn-primary{
+    background-color: #132D46 !important;
+    border: none !important;
+}
+.card{
+    background-color: #01c38e !important;
+    border-radius: 10px !important; 
+}

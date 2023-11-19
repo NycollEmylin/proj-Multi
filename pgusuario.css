@@ -1,0 +1,13 @@
+nav.navbar.navbar-expand-lg.navbar-light.bg-light{
+    background-color: #132D46 !important;
+}
+.card-header{
+    background-color: #132D46 !important;
+    color: white !important;
+    font: 500 15px "Lora-SemiBold", sans-serif !important;
+
+}
+.card-body{
+    font: 500 15px "Lora-SemiBold", sans-serif !important;
+
+}

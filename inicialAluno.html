@@ -5,15 +5,261 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="inicial.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        /* Adicione estilos conforme necessário */
+        .historico {
+            text-align: center;
+        }
+        .historico-card {
+            width: 12rem;
+            margin-right: 10px;
+            display: inline-block;
+        }
+        .historico-btn {
+            margin-top: 10px;
+        }
+        .ranking-card {
+            width: 17rem;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        .recomendados-card {
+            width: 22rem;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        p.card-text{
+            width: 50% !important;
+        }
+    </style>
     <title>Inicial</title>
 </head>
 <body>
+    <div class="inicial-aluno">
+        <div class="cabe-alho">
 
+            <svg
+              class="rectangle-19"
+              width="1400"
+              height="396"
+              viewBox="0 0 1400 396"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M-27 -10.6725H1403.92C1403.92 -10.6725 1445.31 -144.514 1445.31 378.81C1445.31 902.134 1551.61 232.465 1148.91 245.895C833.915 256.4 292.236 250.471 71.2205 247.39C16.6744 246.63 -27 202.168 -27 147.617V-10.6725Z"
+                fill="#132D46"
+              />
+            </svg>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <div class="container-fluid">
+                  <!-- Logo e Nome da Empresa -->
+                  <div class="d-flex align-items-center">
+                      <img src="Untitled.png" alt="Logo" height="30" class="me-2">
+                      <span class="navbar-brand">DevSkill Hub</span>
+                  </div>
+          
+                  <!-- Barra de Pesquisa -->
+                  <form class="d-flex mx-auto">
+                      <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                      <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+                  </form>
+          
+                  <!-- Ícone de Usuário -->
+                  <div class="d-flex align-items-center">
+                      <a href="pgusuario.html" class="btn btn-outline-primary">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                            </svg>                    </a>
+                  </div>
+              </div>
+          </nav>
+          </div>
+          <div class="mt-lg-3 mw-50 d-flex flex-column align-items-center justify-content-center historico" style="margin-top:10rem!important">
+            <h3 class="mb-4">Histórico</h3>
+            <div id="historico-cards" class="row">
+                <!-- Cards de histórico serão adicionados dinamicamente aqui -->
+            </div>
+            <button id="ver-mais-btn" class="btn btn-primary historico-btn">Ver Mais</button>
+        </div>
 
+        <!-- Seção de Ranking -->
+        <div class="mt-lg-3 mw-50 d-flex flex-column align-items-center justify-content-center ranking">
+            <h3 class="mb-4">Ranking</h3>
+            <div id="ranking-cards" class="row">
+                <!-- Cards de ranking serão adicionados dinamicamente aqui -->
+            </div>
+        </div>
 
+        <!-- Seção de Recomendados -->
+        <div class="mt-lg-3 mw-50 d-flex flex-column align-items-center justify-content-center  recomendados">
+            <p class="h3">Recomendados</p>
+            <div id="recomendados-cards" class="row">
+                <!-- Cards de recomendados serão adicionados dinamicamente aqui -->
+            </div>
+        </div>
+    </div>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-xrDPeVaF4fLF00O0sOhafjozTACMC4TcX5LjOwFLhoNPv9JvznUUT9nD4b5d81L9" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-beta2/js/bootstrap.min.js" integrity="sha384-pzjw8Q+UvLNuxKr0uuVAxpJWXYo1QzBCgg5W20ouAFJGoU9UdZ/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
+    <script>
+        // Exemplo de dados para os cards de histórico
+        const historicoData = [
+            { nome: "Prova 01", link: "#" },
+            { nome: "Prova 02", link: "#" },
+            { nome: "Prova 03", link: "#" },
+            // Adicione mais dados conforme necessário
+        ];
     
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-xrDPeVaF4fLF00O0sOhafjozTACMC4TcX5LjOwFLhoNPv9JvznUUT9nD4b5d81L9" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-beta2/js/bootstrap.min.js" integrity="sha384-pzjw8Q+UvLNuxKr0uuVAxpJWXYo1QzBCgg5W20ouAFJGoU9UdZ/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
+        // Função para criar cards de histórico
+        function criarCardsHistorico() {
+            const historicoCardsContainer = document.getElementById("historico-cards");
+    
+            historicoData.forEach((prova) => {
+                const card = document.createElement("div");
+                card.className = "col-12 col-md-6 col-lg-3 mb-3 historico-card";
+    
+                const cardBody = document.createElement("div");
+                cardBody.className = "card h-100";
+    
+                const cardTitle = document.createElement("h5");
+                cardTitle.className = "card-title p-3";
+                cardTitle.textContent = prova.nome;
+    
+                const cardLink = document.createElement("a");
+                cardLink.href = prova.link;
+                cardLink.className = "btn btn-primary";
+                cardLink.textContent = "Entrar";
+    
+                cardBody.appendChild(cardTitle);
+                cardBody.appendChild(cardLink);
+                card.appendChild(cardBody);
+    
+                historicoCardsContainer.appendChild(card);
+            });
+        }
+    
+        // Chamar a função para criar os cards de histórico
+        criarCardsHistorico();
+    </script>
+     <!-- ... (código anterior) ... -->
+
+     <script>
+        // Exemplo de dados para os cards de ranking
+        const rankingData = [
+            { nome: "Nycolle", foto: "9d5bc2be-7e88-4ddb-a01e-d8f53d7ef0c9.jpeg", acertos: 95 },
+            { nome: "Maria", foto: "maria.jpg", acertos: 90 },
+            { nome: "Pedro", foto: "pedro.jpg", acertos: 85 },
+            // Adicione mais dados conforme necessário
+        ];
+    
+        // Função para criar cards de ranking
+        function criarCardsRanking() {
+            const rankingCardsContainer = document.getElementById("ranking-cards");
+    
+            rankingData.forEach((aluno) => {
+                const card = document.createElement("div");
+                card.className = "col-15 ranking-card";
+    
+                const cardBody = document.createElement("div");
+                cardBody.className = "card mb-3";
+    
+                const cardContent = document.createElement("div");
+                cardContent.className = "row g-0";
+    
+                const cardImageContainer = document.createElement("div");
+                cardImageContainer.className = "col-md-4 d-flex align-items-center justify-content-center";
+    
+                const cardImage = document.createElement("img");
+                cardImage.src = aluno.foto;
+                cardImage.alt = "Foto do Aluno";
+                cardImage.className = "img-fluid rounded-circle";
+                cardImage.style.width = "80px"; // Ajuste o tamanho do círculo conforme necessário
+    
+                const cardTextContainer = document.createElement("div");
+                cardTextContainer.className = "col-md-8 d-flex flex-column justify-content-center align-items-start";
+    
+                const cardTitle = document.createElement("h5");
+                cardTitle.className = "card-title";
+                cardTitle.textContent = aluno.nome;
+    
+                const cardText = document.createElement("p");
+                cardText.className = "card-text";
+                cardText.textContent = `Acertos: ${aluno.acertos}`;
+    
+                cardImageContainer.appendChild(cardImage);
+                cardTextContainer.appendChild(cardTitle);
+                cardTextContainer.appendChild(cardText);
+    
+                cardContent.appendChild(cardImageContainer);
+                cardContent.appendChild(cardTextContainer);
+    
+                cardBody.appendChild(cardContent);
+                card.appendChild(cardBody);
+    
+                rankingCardsContainer.appendChild(card);
+            });
+        }
+    
+        // Chamar a função para criar os cards de ranking
+        criarCardsRanking();
+    </script>
+<!-- ... (código anterior) ... -->
+
+    <script>
+        // Exemplo de dados para os cards de recomendados
+        const recomendadosData = [
+            { nome: "JavaScript", linguagem: "JavaScript", icone: "javascript-icon.png", linkAulas: "#" },
+            { nome: "Python", linguagem: "Python", icone: "python-icon.png", linkAulas: "#" },
+            { nome: "HTML/CSS", linguagem: "HTML/CSS", icone: "html-css-icon.png", linkAulas: "#" },
+            // Adicione mais dados conforme necessário
+        ];
+    
+        // Função para criar cards de recomendados
+        function criarCardsRecomendados() {
+            const recomendadosCardsContainer = document.getElementById("recomendados-cards");
+    
+            recomendadosData.forEach((recomendado) => {
+                const card = document.createElement("div");
+                card.className = "col-15 recomendados-card";
+    
+                const cardBody = document.createElement("div");
+                cardBody.className = "card h-100";
+    
+                const cardIcon = document.createElement("img");
+                cardIcon.src = recomendado.icone;
+                cardIcon.alt = "Ícone da Linguagem";
+                cardIcon.className = "card-img-top";
+    
+                const cardTitle = document.createElement("h5");
+                cardTitle.className = "card-title";
+                cardTitle.textContent = recomendado.nome;
+    
+                const cardText = document.createElement("p");
+                cardText.className = "card-text";
+                cardText.textContent = `Linguagem: ${recomendado.linguagem}`;
+    
+                const cardLink = document.createElement("a");
+                cardLink.href = recomendado.linkAulas;
+                cardLink.className = "btn btn-primary";
+                cardLink.textContent = "Ver Aulas";
+    
+                cardBody.appendChild(cardIcon);
+                cardBody.appendChild(cardTitle);
+                cardBody.appendChild(cardText);
+                cardBody.appendChild(cardLink);
+                card.appendChild(cardBody);
+    
+                recomendadosCardsContainer.appendChild(card);
+            });
+        }
+    
+        // Chamar a função para criar os cards de recomendados
+        criarCardsRecomendados();
+    </script>
 </body>
+</html>
