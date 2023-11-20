@@ -1,8 +1,7 @@
-nav.navbar.navbar-expand-lg.navbar-light.bg-light{
-    background-color: #132D46 !important;
-}
+
 .card-header{
-    background-color: #132D46 !important;
+    
+    background-color: #006fd9 !important;
     color: white !important;
     font: 500 15px "Lora-SemiBold", sans-serif !important;
 
@@ -10,4 +9,10 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light{
 .card-body{
     font: 500 15px "Lora-SemiBold", sans-serif !important;
 
+}
+.bg-body-tertiary {
+    background-color: #006fd9 !important;
+}
+.navbar-toggler{
+        background-color: #0f9c0fbe !important;
 }

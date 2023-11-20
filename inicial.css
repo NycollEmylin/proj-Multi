@@ -33,17 +33,8 @@ p.card-text{
   height: 396px;
   position: absolute;
   left: 0px;
-  top: 0px;
+  top: -35px;
   overflow: hidden;
-}
-.rectangle-19 {
-  border-radius: 0px;
-  width: 1485px;
-  height: 394px;
-  position: absolute;
-  left: -99px;
-  top: -140px;
-  overflow: visible;
 }
 .pesquisa {
   width: 100%;
@@ -56,7 +47,7 @@ p.card-text{
     --bs-bg-opacity:0 !important;
 }
 .btn-primary{
-    background-color: #132D46 !important;
+    /* background-color: #006fd9 !important; */
     border: none !important;
 }
 .card{

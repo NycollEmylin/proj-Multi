@@ -5,107 +5,161 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="inicial.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <link href="https: //cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <style>
         /* Adicione estilos conforme necessário */
-        .historico {
+        .historico, .ranking, .recomendados, .provas {
             text-align: center;
+            margin: 2rem 0;
         }
-        .historico-card {
-            width: 12rem;
-            margin-right: 10px;
-            display: inline-block;
-        }
-        .historico-btn {
-            margin-top: 10px;
-        }
-        .ranking-card {
-            width: 17rem;
-            margin-right: 10px;
+        
+        .historico-card, .ranking-card, .recomendados-card, .provas-card {
+            width: 100%; /* Ocupar a largura total */
             margin-bottom: 10px;
             display: inline-block;
         }
-        .recomendados-card {
-            width: 22rem;
-            margin-right: 10px;
-            margin-bottom: 10px;
-            display: inline-block;
+
+        .ranking-card img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        @media (min-width: 768px) {
+            .historico-card, .ranking-card, .recomendados-card, .provas-card {
+                width: 48%; /* Dividir em duas colunas para desktop */
+            }
+            .cabe-alho {
+                margin-top: -59px;
+            }
         }
         p.card-text{
             width: 50% !important;
         }
+        .bg-body-tertiary {
+            background-color: #006fd9 !important;
+    --bs-bg-opacity: 0 !important;
+}
+.navbar-toggler{
+        background-color: #75b798 !important;
+}
     </style>
     <title>Inicial</title>
 </head>
 <body>
-    <div class="inicial-aluno">
-        <div class="cabe-alho">
+  <div class="cabe-alho">
+    <svg
+  class="cabe-alho"
+  width="1400"
+  height="309"
+  viewBox="0 0 1400 309"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M-1 0H1400V149C1400 149 1325.57 100.779 1272 99.5867C1215.14 98.321 1142.53 149.365 1056 149C971.033 148.642 902.352 103.056 844.113 99.5867C773.825 95.4003 741.106 150.692 670.715 149C605.78 147.439 576.707 103.958 511.902 99.5867C428.971 93.9932 387.929 152.346 304.877 149C233.762 146.135 200.354 93.3659 129.454 99.5867C75.1846 104.348 -1 149 -1 149V0Z"
+    fill="#006FD9"
+  />
+</svg>
 
-            <svg
-              class="rectangle-19"
-              width="1400"
-              height="396"
-              viewBox="0 0 1400 396"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M-27 -10.6725H1403.92C1403.92 -10.6725 1445.31 -144.514 1445.31 378.81C1445.31 902.134 1551.61 232.465 1148.91 245.895C833.915 256.4 292.236 250.471 71.2205 247.39C16.6744 246.63 -27 202.168 -27 147.617V-10.6725Z"
-                fill="#132D46"
-              />
-            </svg>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-              <div class="container-fluid">
-                  <!-- Logo e Nome da Empresa -->
-                  <div class="d-flex align-items-center">
-                      <img src="Untitled.png" alt="Logo" height="30" class="me-2">
-                      <span class="navbar-brand">DevSkill Hub</span>
-                  </div>
-          
-                  <!-- Barra de Pesquisa -->
-                  <form class="d-flex mx-auto">
-                      <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-                      <button class="btn btn-outline-success" type="submit">Pesquisar</button>
-                  </form>
-          
-                  <!-- Ícone de Usuário -->
-                  <div class="d-flex align-items-center">
-                      <a href="pgusuario.html" class="btn btn-outline-primary">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-                            </svg>                    </a>
-                  </div>
-              </div>
-          </nav>
-          </div>
-          <div class="mt-lg-3 mw-50 d-flex flex-column align-items-center justify-content-center historico" style="margin-top:10rem!important">
-            <h3 class="mb-4">Histórico</h3>
-            <div id="historico-cards" class="row">
-                <!-- Cards de histórico serão adicionados dinamicamente aqui -->
+  
+
+    <nav class="navbar bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="Untitled.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                DevSkill Hub
+              </a>         
+               <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">DevSkill Hub</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <button id="ver-mais-btn" class="btn btn-primary historico-btn">Ver Mais</button>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="inicialAluno.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="pgusuario.html">Minha conta</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Estudo
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Provas</a></li>
+                    <li><a class="dropdown-item" href="#">Simulados</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Playlists</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <form class="d-flex mt-3" role="search">
+                <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+</div>
+<div class="container mt-5" style="margin-top: 7rem!important;">
+    <div class="row">
+        <!-- Seção de Provas -->
+        <div class="col-lg-6">
+            <div class="provas">
+                <p class="h3">Provas</p>
+                <div id="provas-cards" class="row">
+                    <!-- Cards de provas serão adicionados dinamicamente aqui -->
+                </div>
+            </div>
         </div>
 
         <!-- Seção de Ranking -->
-        <div class="mt-lg-3 mw-50 d-flex flex-column align-items-center justify-content-center ranking">
-            <h3 class="mb-4">Ranking</h3>
-            <div id="ranking-cards" class="row">
-                <!-- Cards de ranking serão adicionados dinamicamente aqui -->
+        <div class="col-lg-6">
+            <div class="ranking">
+                <h3 class="mb-4">Ranking</h3>
+                <div id="ranking-cards" class="row">
+                    <!-- Cards de ranking serão adicionados dinamicamente aqui -->
+                </div>
             </div>
         </div>
 
         <!-- Seção de Recomendados -->
-        <div class="mt-lg-3 mw-50 d-flex flex-column align-items-center justify-content-center  recomendados">
-            <p class="h3">Recomendados</p>
-            <div id="recomendados-cards" class="row">
-                <!-- Cards de recomendados serão adicionados dinamicamente aqui -->
+        <div class="col-lg-6">
+            <div class="recomendados">
+                <p class="h3">Recomendados</p>
+                <div id="recomendados-cards" class="row">
+                    <!-- Cards de recomendados serão adicionados dinamicamente aqui -->
+                </div>
             </div>
         </div>
-    </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-xrDPeVaF4fLF00O0sOhafjozTACMC4TcX5LjOwFLhoNPv9JvznUUT9nD4b5d81L9" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-beta2/js/bootstrap.min.js" integrity="sha384-pzjw8Q+UvLNuxKr0uuVAxpJWXYo1QzBCgg5W20ouAFJGoU9UdZ/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
+        <!-- Seção de Historico -->
+        <div class="col-lg-6">
+            <div class="historico">
+                <h3 class="mb-4">Histórico</h3>
+                <div id="historico-cards" class="row">
+                    <!-- Cards de histórico serão adicionados dinamicamente aqui -->
+                </div>
+                <button id="ver-mais-btn" class="btn btn-primary historico-btn">Ver Mais</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     <script>
         // Exemplo de dados para os cards de histórico
         const historicoData = [
@@ -260,6 +314,47 @@
     
         // Chamar a função para criar os cards de recomendados
         criarCardsRecomendados();
+    </script>
+    <script>
+        // Adapte as funções de criação de cards para a nova seção de provas conforme necessário
+        // Exemplo de dados para os cards de provas
+        const provasData = [
+            { nome: "Prova 01", link: "#" },
+            { nome: "Prova 02", link: "#" },
+            { nome: "Prova 03", link: "#" },
+            // Adicione mais dados conforme necessário
+        ];
+
+        // Função para criar cards de provas
+        function criarCardsProvas() {
+            const provasCardsContainer = document.getElementById("provas-cards");
+
+            provasData.forEach((prova) => {
+                const card = document.createElement("div");
+                card.className = "col-12 mb-3 provas-card";
+
+                const cardBody = document.createElement("div");
+                cardBody.className = "card h-100";
+
+                const cardTitle = document.createElement("h5");
+                cardTitle.className = "card-title p-3";
+                cardTitle.textContent = prova.nome;
+
+                const cardLink = document.createElement("a");
+                cardLink.href = prova.link;
+                cardLink.className = "btn btn-primary";
+                cardLink.textContent = "Entrar";
+
+                cardBody.appendChild(cardTitle);
+                cardBody.appendChild(cardLink);
+                card.appendChild(cardBody);
+
+                provasCardsContainer.appendChild(card);
+            });
+        }
+
+        // Chamar a função para criar os cards de provas
+        criarCardsProvas();
     </script>
 </body>
 </html>
