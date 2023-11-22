@@ -56,18 +56,17 @@
 
     <div class="row mt-1 justify-content-center">
         <div class="col-md-4">
-            <form>
+            <form method="POST" action="login.php">
               <div class="form-group">
                     <div class="input-group mb-3 input-btn" >
-                      <span class="input-group-text" id="inputGroup-sizing-default">RN</span>
-                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"placeholder="Digite seu RN">
+                      <span class="input-group-text" id="inputGroup-sizing-default">Matrícula</span>
+                      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"placeholder="Digite sua matrícula" name="ra">
                       </div> 
                     </div>
                     <div class="form-group">
                         <div class="input-group mb-3 input-btn" >
                             <span class="input-group-text" id="inputGroup-sizing-default">Senha</span>
-                            <input type="password" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"placeholder="Digite uma senha">
-                          </div> 
+                            <input type="password" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"placeholder="Digite sua senha" name="senha">                          </div> 
                     </div>
                     <figure class="text-end">
                       <a href="cadastro.html" style="text-decoration: none;">
@@ -76,7 +75,7 @@
                       </figcaption>
                       </a>
                     </figure>
-                    <button type="button" class="btn btn-primary ">Login</button>
+                    <button type="submit" class="btn btn-outline-secondary btn-login">Login</button>
                     <figure class="text-end" style="margin-top: 20px;">
                       <a href="cadastro.html" style="text-decoration: none;">
                       <figcaption class="blockquote-footer">
