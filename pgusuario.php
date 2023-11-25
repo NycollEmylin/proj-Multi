@@ -1,3 +1,21 @@
+<?php
+    require("conexao.php");
+    session_start();
+
+    $matricula = $_SESSION['ra'];
+    $query= "SELECT*FROM usuarios where matricula = '$matricula';";
+    $result = mysqli_query($conexao,$query);
+
+    if (!$result) {
+        die("Erro na consulta ao banco de dados: " . mysqli_error($conexao));
+    }
+    $row = mysqli_num_rows($result);
+    if ($row > 0) {
+        $valor = mysqli_fetch_assoc($result);
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="pgusuario.css"><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script><link href="https:%20//cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"><title>P&aacute;gina do Usu&aacute;rio</title></head><body>
 
@@ -49,9 +67,9 @@
                 <div class="card-body">
                     <!-- Imagem do Usu&aacute;rio -->
                     <img src="9d5bc2be-7e88-4ddb-a01e-d8f53d7ef0c9.jpeg" alt="Imagem do Usu&aacute;rio" class="img-fluid rounded-circle mb-3" style="max-width: 150px;"><!-- Dados do Usu&aacute;rio -->
-                    <p><span id="nomeUser"></span></p>
+                    <p><span id="nomeUser"><strong>Nome: </strong><?php echo $valor['NOME']?></span></p>
                     <p id="faculdadeUser"></p>
-                    <p id="raUser"></p>
+                    <p id="raUser"><strong>Matrícula: </strong><?php echo $valor['MATRICULA']?></p>
                     <p id="resUser"></p>
                    <!-- Bot&atilde;o Editar --><button class="btn btn-primary">Editar</button>
                 </div>

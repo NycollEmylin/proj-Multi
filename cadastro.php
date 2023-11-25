@@ -17,7 +17,7 @@
     if($row!=1){
         if($tipo=="aluno"){
             if($senha==$confirmacao){
-                $queryIn = "INSERT INTO usuarios (nome,email,telefone,tipo,senha,matricula) VALUES ('".$_POST['nome']."','".$_POST['email']."','".$_POST['fone']."','".$_POST['tipo']."','$hashedPassword','".$_POST['ra']."')";
+                $queryIn = "INSERT INTO usuarios (nome,email,telefone,tipo,senha,matricula,apelido) VALUES ('".$_POST['nome']."','".$_POST['email']."','".$_POST['fone']."','".$_POST['tipo']."','$hashedPassword','".$_POST['ra']."','".$_POST['nome']."')";
                 if(mysqli_query($conexao, $queryIn)) {
                     $alert = "<script>alert('Cadastro realizado com sucesso');</script>";
                     echo $alert;

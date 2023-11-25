@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require("conexao.php");
 
     $matricula = mysqli_real_escape_string($conexao, $_POST['ra']);
@@ -18,9 +19,11 @@
     //echo password_verify($senha, $valor['senha']);
 
      if (password_verify($senha, $valor['senha']) and $valor['TIPO']=="aluno") {
-        $_SESSION['nome'] = $valor['nome'];
-        $link = '<a href=pgusuario.php"></a>';
+        $_SESSION['nome'] = $valor['NOME'];
+        $_SESSION['ra'] = $valor['MATRICULA'];
+        //$link = '<a href=pgusuario.php"></a>';
         header('Location: inicialAluno.html');
+        //echo $valor['NOME'];
         exit();
      }
      if ((password_verify($senha, $valor['senha']) or $valor['senha'] =='123456') and $valor['TIPO']=="adm") {
