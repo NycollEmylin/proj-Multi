@@ -104,14 +104,14 @@
   .input-group-text{
     font: 500 15px "Lora-SemiBold", sans-serif !important;
 
-    background-color: #01c38e !important;
+    background-color: #70AEEA !important;
     border-radius: 0px !important;
     margin: 0px !important;
     border: 0px !important;
   }
   .input-btn{
     border-style: solid;
-    border-color: #01c38e;
+    border-color: #70AEEA;
     border-width: 2px;
   }
    .input-group{
@@ -134,7 +134,7 @@
   top: 502px;
 }
 .rectangle-10 {
-    background: #01c38e !important;
+    background: #70AEEA !important;
     width: 295px;
     height: 66px;
     position: absolute;
@@ -318,7 +318,7 @@ button.btn.btn-primary{
   top: 502px;
 }
 .rectangle-122 {
-  background: #01c38e;
+  background: #70AEEA;
   width: 295px;
   height: 66px;
   position: absolute;
