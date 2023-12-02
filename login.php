@@ -25,11 +25,13 @@
         header('Location: inicialAluno.html');
         //echo $valor['NOME'];
         exit();
-     }
-     if ((password_verify($senha, $valor['senha']) or $valor['senha'] =='123456') and $valor['TIPO']=="adm") {
+     }else if((password_verify($senha, $valor['senha']) or $valor['senha'] =='123456') and $valor['TIPO']=="adm") {
         $_SESSION['nome'] = $valor['nome'];
         header('Location: adm.html');
         exit();
+     }else{
+        $alert = "<script>alert('Senha ou usuário incorretos');</script>";
+        echo $alert;
      }
 
 ?>

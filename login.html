@@ -58,8 +58,11 @@
         <div class="col-md-4">
             <form method="POST" action="login.php">
               <div class="form-group">
+                <div class="alert alert-danger" role="alert">
+                   Alerta Senha ou Uuário incorretos
+                </div>
                     <div class="form-floating mb-3" >
-                      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                      <input type="text" class="form-control" id="floatingInput" name="ra" placeholder="name@example.com">
                       <label for="floatingInput">Matrícula</label>
                       <!-- <span class="input-group-text" id="inputGroup-sizing-default">Matrícula</span>
                       <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"placeholder="Digite sua matrícula" name="ra"> -->
@@ -67,7 +70,7 @@
                     </div>
                     <div class="form-group">
                         <div class="form-floating mb-3" >
-                          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                          <input type="password" class="form-control" name="senha" id="floatingPassword" placeholder="Password">
                           <label for="floatingPassword">Senha</label>
                             <!-- <span class="input-group-text" id="inputGroup-sizing-default">Senha</span>
                             <input type="password" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"placeholder="Digite sua senha" name="senha">                          </div>  -->
