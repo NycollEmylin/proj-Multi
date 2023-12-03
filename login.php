@@ -1,4 +1,5 @@
 <?php
+    error_reporting(0);
     session_start();
     require("conexao.php");
 
@@ -102,7 +103,6 @@
                      //   echo $alert;
                   }
                 }
-                ini_set('display_errors', 0);
               ?>
                     <div class="form-floating mb-3" >
                       <input type="text" class="form-control" id="floatingInput" name="ra" placeholder="name@example.com">
