@@ -10,103 +10,87 @@
 </head>
 <body>
  <div class="cadastro">
-<!-- app.component.html -->
-<div class="container-fluid">
-    <div class="row">
-      <div class="col-12 col-md-6">
-        <svg
-          class="rectangle-9 img-fluid"
-          viewBox="0 0 430 209"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M0 0H430V18C430 18 339.5 20.5 281 88.5C222.5 156.5 221.5 42 150.5 132.5C79.5 223 0 207 0 207V0Z"
-            fill="#132D46"
-          />
-        </svg>
-      </div>
-  
-      <div class="col-12 col-md-6">
-        <svg
-          class="line-1 img-fluid"
-          viewBox="0 0 430 210"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M-6.00002 206C-6.00002 206 69.1902 224 135.5 143.5C201.81 63 255 149 291.5 91C328 32.9999 424 26.0001 428 1.00011"
-            stroke="black"
-            stroke-width="4"
-          />
-        </svg>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row mt-5" style="margin-top: 6rem!important;">
-        <div class="col-12 text-center">
-            <img src="Untitled.png" alt="Logo" class="img-fluid img-logo" style="max-width: 100px;">
-            <h2>Bem-vindo à nossa plataforma!</h2>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <svg class="rectangle-9 img-fluid" viewBox="0 0 430 209" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0H430V18C430 18 339.5 20.5 281 88.5C222.5 156.5 221.5 42 150.5 132.5C79.5 223 0 207 0 207V0Z" fill="#132D46"/>
+                </svg>
+            </div>
+            <div class="col-12 col-md-6">
+                <svg class="line-1 img-fluid" viewBox="0 0 430 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M-6.00002 206C-6.00002 206 69.1902 224 135.5 143.5C201.81 63 255 149 291.5 91C328 32.9999 424 26.0001 428 1.00011" stroke="black" stroke-width="4"/>
+                </svg>
+            </div>
         </div>
     </div>
 
-    <div class="row mt-1 justify-content-center">
-        <div class="col-md-4">
-            <form method="POST" action="cadastro.php">
-                <div class="form-group">
-                    <div class="input-group mb-3 input-btn" >
-                        <span class="input-group-text" id="inputGroup-sizing-default">Nome</span>
-                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"placeholder="Nome Completo" name="nome" id="nome">
-                      </div> 
-                </div>
-                <div class="form-group">
-                    <div class="input-group mb-3 input-btn" >
-                        <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
-                        <input type="email" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"placeholder="Email" name="email" id="email">
-                      </div> 
-                </div>
-                <div class="form-group">
-                  <div class="input-group mb-3 input-btn" >
-                      <span class="input-group-text" id="inputGroup-sizing-default">Telefone</span>
-                      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"placeholder="(00) 00000-0000" name="fone" id="fone">
-                    </div> 
-              </div>
-                <div class="form-group">
-                    <div class="input-group mb-3 input-btn" >
-                        <span class="input-group-text" id="inputGroup-sizing-default">Senha</span>
-                        <input type="password" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"placeholder="Senha" name="senha">
-                      </div> 
-                </div>
-                <div class="form-group">
-                  <div class="input-group mb-3 input-btn" >
-                      <span class="input-group-text" id="inputGroup-sizing-default">Confirmação</span>
-                      <input type="password" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"placeholder="Confirme sua senha" name="confirmacao">
-                    </div> 
-              </div>
-                <div class="form-group">
-                    <div class="input-group mb-3 input-btn" >
-                        <span class="input-group-text" id="inputGroup-sizing-default">Matrícula</span>
-                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"placeholder="Matrícula" name="ra">
-                      </div> 
-                </div>
-                <div class="form-group">
-                    <div class="input-group mb-3 input-btn" >
-                        <span class="input-group-text" id="inputGroup-sizing-default">Eu sou:</span>
-                    <select class="form-control" id="selectTipo" class="btn btn-outline-secondary dropdown-toggle" name="tipo"> 
-                        <option value="aluno">Aluno</option>
-                        <option value="adm">Administrador</option>
-                    </select>
-                </div>
-                <figure class="text-end">
-                  <a href="login.html" style="text-decoration: none;">
-                  <figcaption class="blockquote-footer">
-                    Já tenho conta<cite title="Source Title"> Realizar login</cite>
-                  </figcaption>
-                  </a>
-                </figure>
-                <button type="submit" class="btn btn-outline-secondary btn-cadastrar">Cadastrar</button>
-            </form>
+    <div class="container">
+        <div class="row mt-5" style="margin-top: 6rem!important;">
+            <div class="col-12 text-center">
+                <img src="Untitled.png" alt="Logo" class="img-fluid img-logo" style="max-width: 100px;">
+                <h2>Bem-vindo à nossa plataforma!</h2>
+            </div>
+        </div>
+
+        <div class="row mt-1 justify-content-center">
+            <div class="col-md-4">
+                <form method="POST" action="cadastro.php">
+                    <div class="form-group">
+                        <div class="form-floating mb-3" >
+                            <span class="input-group-text" id="inputGroup-sizing-default">Nome</span>
+                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"placeholder="Nome Completo" name="nome" id="nome">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-floating mb-3" >
+                            <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
+                            <input type="email" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"placeholder="Email" name="email" id="email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-floating mb-3" >
+                            <span class="input-group-text" id="inputGroup-sizing-default">Telefone</span>
+                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"placeholder="(00) 00000-0000" name="fone" id="fone">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-floating mb-3" >
+                            <span class="input-group-text" id="inputGroup-sizing-default">Senha</span>
+                            <input type="password" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"placeholder="Senha" name="senha">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-floating mb-3" >
+                            <span class="input-group-text" id="inputGroup-sizing-default">Confirmação</span>
+                            <input type="password" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"placeholder="Confirme sua senha" name="confirmacao">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-floating mb-3" >
+                            <span class="input-group-text" id="inputGroup-sizing-default">Matrícula</span>
+                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"placeholder="Matrícula" name="ra">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-floating mb-3" >
+                            <span class="input-group-text" id="inputGroup-sizing-default">Eu sou:</span>
+                            <select class="form-control" id="selectTipo" class="btn btn-outline-secondary dropdown-toggle" name="tipo"> 
+                                <option value="aluno">Aluno</option>
+                                <option value="adm">Administrador</option>
+                            </select>
+                        </div>
+                    </div>
+                    <figure class="text-end">
+                        <a href="login.html" style="text-decoration: none;">
+                            <figcaption class="blockquote-footer">
+                                Já tenho conta<cite title="Source Title"> Realizar login</cite>
+                            </figcaption>
+                        </a>
+                    </figure>
+                    <button type="submit" class="btn btn-outline-secondary btn-cadastrar">Cadastrar</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>
@@ -117,6 +101,5 @@
 <script>
   $('#fone').mask('(00) 00000-0000');
 </script>
- </div>
-</body>
+ </body>
 </html>
