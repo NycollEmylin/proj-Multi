@@ -88,11 +88,16 @@
                      header('Location: inicialAluno.html');
                      //echo $valor['NOME'];
                      exit();
-                  } else if ((password_verify($senha, $valor['senha']) or $valor['senha'] =='123456') and $valor['TIPO']=="adm") {
+                  } else if ($valor['senha'] =='123456' and $valor['TIPO']=="adm") {
                      $_SESSION['nome'] = $valor['nome'];
-                     header('Location: adm.html');
+                     header('Location: redfinirsenha.html');
                      exit();
-                  } else if(empty($_POST['ra']) or empty($_POST['senha'])){
+                  
+                  }else if($valor['senha'] !='123456' and password_verify($senha, $valor['senha'])  and $valor['TIPO']=="adm"){
+                    $_SESSION['nome'] = $valor['nome'];
+                    header('Location: inicialprof.html');
+                    exit();
+                  } else if(empty($_POST['email']) or empty($_POST['senha'])){
                      echo '<div class="alert alert-danger" role="alert">
                           Todos os campos devem ser preenchidos
                           </div>';
@@ -120,7 +125,7 @@
                             <input type="password" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"placeholder="Digite sua senha" name="senha">                          </div>  -->
                     </div>
                     <figure class="text-end">
-                      <a href="cadastro.html" style="text-decoration: none;">
+                      <a href="redefinirsenha.php" style="text-decoration: none;">
                       <figcaption class="blockquote-footer">
                         <cite title="Source Title"> Esqueci a senha</cite>
                       </figcaption>

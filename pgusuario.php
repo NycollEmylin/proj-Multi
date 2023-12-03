@@ -55,8 +55,8 @@
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Estudo
               </a>
-              <ul class="dropdown-menu"><li><a class="dropdown-item" href="#">Provas</a></li>
-                <li><a class="dropdown-item" href="#">Simulados</a></li>
+              <ul class="dropdown-menu"><li><a class="dropdown-item" href="provas.html">Provas</a></li>
+                <li><a class="dropdown-item" href="provas.html">Simulados</a></li>
                 <li>
                   <hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#">Playlists</a></li>
