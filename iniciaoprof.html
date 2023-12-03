@@ -371,6 +371,28 @@ body.dark-mode .navbar-brand{
         </div> 
  </div>
     </div>
+    <!-- Adicione após a seção de Provas e Simulados -->
+<div class="container mt-5">
+    <h3>Adicionar Prova ou Simulado</h3>
+    <form>
+        <div class="mb-3">
+            <label for="titulo" class="form-label">Título</label>
+            <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Digite o título" required>
+        </div>
+        <div class="mb-3">
+            <label for="tipo" class="form-label">Tipo</label>
+            <select class="form-select" id="tipo" name="tipo" required>
+                <option value="prova">Prova</option>
+                <option value="simulado">Simulado</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="ano" class="form-label">Ano</label>
+            <input type="number" class="form-control" id="ano" name="ano" placeholder="Digite o ano" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Adicionar</button>
+    </form>
+</div>
     <div class="footer">
         <p>DevSkill Hub &copy; 2023</p>
         <button class="btn btn-info">Ajuda</button>
