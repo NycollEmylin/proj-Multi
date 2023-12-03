@@ -12,10 +12,9 @@
     if ($row > 0) {
         $valor = mysqli_fetch_assoc($result);
     }
-      echo $_POST['nick'];
       $query = "UPDATE usuarios SET apelido = '".$_POST['nick']."' WHERE nome = '".$valor['NOME']."';";
       if(mysqli_query($conexao, $query)) {
-        echo "Alterações feitas com sucesso";
+        
       }else{
         echo "Falha ao conectar";
       }

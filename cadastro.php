@@ -120,7 +120,7 @@
                         }   
 
                         mysqli_close($conexao);
-                    ?>
+?>
                     <div class="input-group mb-3 input-btn" >
                         <span class="input-group-text" id="inputGroup-sizing-default">Nome</span>
                         <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"placeholder="Nome Completo" name="nome" id="nome">

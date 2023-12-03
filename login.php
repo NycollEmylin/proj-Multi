@@ -3,10 +3,10 @@
     session_start();
     require("conexao.php");
 
-    $matricula = mysqli_real_escape_string($conexao, $_POST['ra']);
+    $email = mysqli_real_escape_string($conexao, $_POST['email']);
     $senha = mysqli_real_escape_string($conexao,$_POST['senha']);
 
-    $query= "SELECT * FROM usuarios where matricula = '$matricula';";
+    $query= "SELECT * FROM usuarios where email = '$email';";
     $result = mysqli_query($conexao,$query);
 
     if (!$result) {
@@ -83,6 +83,7 @@
                   if (password_verify($senha, $valor['senha']) and $valor['TIPO']=="aluno") {
                      $_SESSION['nome'] = $valor['NOME'];
                      $_SESSION['ra'] = $valor['MATRICULA'];
+                     $_SESSION['email'] = $valor['EMAIL'];
                      //$link = '<a href=pgusuario.php"></a>';
                      header('Location: inicialAluno.html');
                      //echo $valor['NOME'];
@@ -105,8 +106,8 @@
                 }
               ?>
                     <div class="form-floating mb-3" >
-                      <input type="text" class="form-control" id="floatingInput" name="ra" placeholder="name@example.com">
-                      <label for="floatingInput">Matrícula</label>
+                      <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com">
+                      <label for="floatingInput">Email</label>
                       <!-- <span class="input-group-text" id="inputGroup-sizing-default">Matrícula</span>
                       <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"placeholder="Digite sua matrícula" name="ra"> -->
                       </div> 
