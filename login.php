@@ -89,12 +89,14 @@
                      //echo $valor['NOME'];
                      exit();
                   } else if ($valor['senha'] =='123456' and $valor['TIPO']=="adm") {
-                     $_SESSION['nome'] = $valor['nome'];
-                     header('Location: redfinirsenha.html');
+                     $_SESSION['nome'] = $valor['NOME'];
+                     $_SESSION['email'] = $valor['EMAIL'];
+                     header('Location: trocarsenha.php');
                      exit();
                   
                   }else if($valor['senha'] !='123456' and password_verify($senha, $valor['senha'])  and $valor['TIPO']=="adm"){
-                    $_SESSION['nome'] = $valor['nome'];
+                    $_SESSION['nome'] = $valor['NOME'];
+                    $_SESSION['email'] = $valor['EMAIL'];
                     header('Location: inicialprof.html');
                     exit();
                   } else if(empty($_POST['email']) or empty($_POST['senha'])){

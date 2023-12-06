@@ -101,8 +101,8 @@
                                     }else{
                                         $queryIn = "INSERT INTO usuarios (nome,email,telefone,tipo,senha,matricula) VALUES ('".$_POST['nome']."','".$_POST['email']."','".$_POST['fone']."','".$_POST['tipo']."','123456','".$_POST['ra']."')";
                                             if(mysqli_query($conexao, $queryIn)) {
-                                                echo '<div class="alert alert-danger" role="alert">
-                                                Cadastro Realizadoo com sucesso
+                                                echo '<div class="alert alert-success" role="alert">
+                                                Cadastro Realizado com sucesso
                                             </div>';
                                                 // $voltar = "<a href= index.html><button>Ir para página inicial</button></a>";
                                                 // echo $voltar;
