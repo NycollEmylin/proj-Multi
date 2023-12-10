@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <link href="https: //cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        body {
+            padding-top: 56px; /* Ajuste para o posicionamento fixo do menu */
+        }
+        .navbar {
+            background-color: #006FD9 !important;
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #2196F3;
+            text-align: center;
+            padding: 10px;
+        }
+        input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(25px);
+}
+body.dark-mode .card {
+  background-color: #132D46 !important  ;
+  color: white !important;
+}
+body.dark-mode h3{
+    color: #70AEEA;
+}
+body.dark-mode .navbar{
+            background-color: #006FD9 !important;
+            color: white !important;
+        }
+body.dark-mode .navbar-brand{
+    color: white !important;
+}
+/* Adicione estilos específicos para o modo claro aqui */
+body.light-mode {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Adicione estilos específicos para o modo escuro aqui */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Estilos para o botão de alternância */
+.switch {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: relative;
+  cursor: pointer;
+  width: 50px;
+  height: 25px;
+  background-color: #ccc;
+  border-radius: 25px;
+  transition: background-color 0.3s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 21px;
+  width: 21px;
+  left: 2px;
+  bottom: 2px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+    </style>
+    <title>Página de Prova</title>
+</head>
+
+<body>
+  <nav class="navbar bg-body-tertiary fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="inicialAluno.html">
+            <img src="Untitled.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            DevSkill Hub
+        </a>
+        <label class="switch">
+            <input type="checkbox" id="modo-escuro-toggle">
+            <span class="slider round"></span>
+            Modo Escuro
+        </label>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">DevSkill Hub</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="pgusuario.html">Página do Usuário</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Provas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="inicialAluno.html">Início</a>
+                    </li>
+                </ul>
+                <form class="d-flex mt-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</nav>
+<?php
+    error_reporting(0);
+    session_start();
+    require("conexao.php");
+
+    $email = mysqli_real_escape_string($conexao, $_POST['email']);
+    $senha = mysqli_real_escape_string($conexao,$_POST['senha']);
+
+    $query= "SELECT * FROM usuarios where email = '$email';";
+    $result = mysqli_query($conexao,$query);
+
+    if (!$result) {
+        die("Erro na consulta ao banco de dados: " . mysqli_error($conexao));
+    }
+    $row = mysqli_num_rows($result);
+    if ($row > 0) {
+        $valor = mysqli_fetch_assoc($result);
+    }
+
+    $query2= "SELECT * FROM perguntas";
+
+    $result2 = mysqli_query($conexao,$query2);
+
+    if (!$result2) {
+        die("Erro na consulta ao banco de dados: " . mysqli_error($conexao));
+    }
+    $row2 = mysqli_num_rows($result2);
+    if ($row2 > 0) {
+        $Perguntas = mysqli_fetch_assoc($result2);
+    }
+
+?>
+
+<form name='perguntas' method="POST">
+    <div class="container mt-5">
+        <h2>Questão 1</h2>
+        <p><?php echo $Perguntas['PERGUNTA'] ?></p>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="resposta" id="resposta1" value="opcao1">
+            <label class="form-check-label" for="resposta1">
+                <?php echo $Perguntas['ALT1'] ?>
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="resposta" id="resposta2" value="opcao2">
+            <label class="form-check-label" for="resposta2">
+                <?php echo $Perguntas['ALT2'] ?>
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="resposta" id="resposta3" value="opcao3">
+            <label class="form-check-label" for="resposta3">
+              <?php echo $Perguntas['ALT3'] ?>
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="resposta" id="resposta4" value="opcao4">
+            <label class="form-check-label" for="resposta4">
+                <?php echo $Perguntas['ALT4'] ?>
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="resposta" id="resposta5" value="opcao5">
+            <label class="form-check-label" for="resposta5">
+                <?php echo $Perguntas['ALT5'] ?>
+            </label>
+        </div>
+
+        <div class="mt-3">
+            <button type="button" class="btn btn-secondary">Anterior</button>
+            <button type="button" class="btn btn-primary ml-2">Pular</button>
+            <button type="button" class="btn btn-success ml-2">Próxima</button>
+        </div>
+    </div>
+</form>
+
+    <div class="footer">
+        <p>DevSkill Hub &copy; 2023</p>
+        <button class="btn btn-info">Ajuda</button>
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+          const modoEscuroToggle = document.getElementById('modo-escuro-toggle');
+
+          // Função para aplicar o modo escuro
+          function aplicarModoEscuro() {
+              document.body.classList.toggle('dark-mode', modoEscuroToggle.checked);
+          }
+
+          // Evento de alteração do switch de modo escuro
+          modoEscuroToggle.addEventListener('change', aplicarModoEscuro);
+
+          // Aplica o modo escuro conforme o estado inicial do switch
+          aplicarModoEscuro();
+      });
+  </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -215,7 +215,7 @@ body.dark-mode .navbar-brand{
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link" href="pgusuario.html">Página do Usuário</a>
+                            <a class="nav-link" href="pgusuario.php">Página do Usuário</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Provas</a>
@@ -374,16 +374,45 @@ body.dark-mode .navbar-brand{
     <!-- Adicione após a seção de Provas e Simulados -->
 <div class="container mt-5">
     <h3>Adicionar Prova ou Simulado</h3>
-    <form>
-        <div class="mb-3">
-            <label for="titulo" class="form-label">Título</label>
-            <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Digite o título" required>
-        </div>
+    <form method="POST" action="cadpgnt.php">
         <div class="mb-3">
             <label for="tipo" class="form-label">Tipo</label>
             <select class="form-select" id="tipo" name="tipo" required>
-                <option value="prova">Prova</option>
-                <option value="simulado">Simulado</option>
+                <option value="dis">Dissertativa</option>
+                <option value="alt">Alternativa</option>
+            </select>
+            <div class="mb-3">
+                <label for="titulo" class="form-label">Questão</label>
+                <input type="text" class="form-control" id="titulo" name="pergunta" placeholder="Digite a pergunta" required>
+            </div>
+            <div class="mb-3">
+                <label for="titulo" class="form-label">Alternativa 1</label>
+                <input type="text" class="form-control" id="titulo" name="alt1" placeholder="Digite a alternativa 1" required>
+            </div>
+            <div class="mb-3">
+                <label for="titulo" class="form-label">Alternativa 2</label>
+                <input type="text" class="form-control" id="titulo" name="alt2" placeholder="Digite a alternativa 2" required>
+            </div>
+            <div class="mb-3">
+                <label for="titulo" class="form-label">Alternativa 3</label>
+                <input type="text" class="form-control" id="titulo" name="alt3" placeholder="Digite a alternativa 3" required>
+            </div>
+            <div class="mb-3">
+                <label for="titulo" class="form-label">Alternativa 4</label>
+                <input type="text" class="form-control" id="titulo" name="alt4" placeholder="Digite a alternativa 4" required>
+            </div>
+            <div class="mb-3">
+                <label for="titulo" class="form-label">Alternativa 5</label>
+                <input type="text" class="form-control" id="titulo" name="alt5" placeholder="Digite a alternativa 5" required>
+            </div>
+        </select>
+        <label for="titulo" class="form-label">Alternativa Certa</label>
+            <select class="form-select" id="tipo" name="certa" required>
+                <option value="ALT1">Alternativa 1</option>
+                <option value="ALT2">Alternativa 2</option>
+                <option value="ALT3">Alternativa 3</option>
+                <option value="ALT4">Alternativa 4</option>
+                <option value="ALT5">Alternativa 5</option>
             </select>
         </div>
         <div class="mb-3">

@@ -85,7 +85,7 @@
                                         if($senha==$confirmacao){
                                             $queryIn = "INSERT INTO usuarios (nome,email,telefone,tipo,senha,matricula,apelido) VALUES ('".$_POST['nome']."','".$_POST['email']."','".$_POST['fone']."','".$_POST['tipo']."','$hashedPassword','".$_POST['ra']."','".$_POST['nome']."')";
                                             if(mysqli_query($conexao, $queryIn)) {
-                                                echo '<div class="alert alert-danger" role="alert">
+                                                echo '<div class="alert alert-success" role="alert">
                                                 Cadastro Realizado com sucesso
                                                 </div>';
                                                 // $voltar = "<a href= index.html><button>Ir para página inicial</button></a>";

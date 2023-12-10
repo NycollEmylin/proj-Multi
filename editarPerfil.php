@@ -1,8 +1,8 @@
 <?php
     require("conexao.php");
     session_start();
-    $matricula = $_SESSION['ra'];
-    $query= "SELECT*FROM usuarios where matricula = '$matricula';";
+    $email = $_SESSION['email'];
+    $query= "SELECT*FROM usuarios where email = '$email';";
     $result = mysqli_query($conexao,$query);
 
     if (!$result) {

@@ -63,7 +63,19 @@
                             if($_SERVER["REQUEST_METHOD"] == "POST") {
                                 $hashedPassword = password_hash($_POST['senha'], PASSWORD_DEFAULT);
                                 if($_POST['senha'] == $_POST['confirmacao']) {
-                                    "UPDATE usuarios SET senha = '$hashedPassword' WHERE email = '$email';";
+                                    $query="UPDATE usuarios SET senha = '$hashedPassword' WHERE email = '$email';";
+                                    if(mysqli_query($conexao, $query)) {
+                                        echo '<div class="alert alert-success" role="alert">
+                                            Senha redefinida
+                                        </div>';
+                                        echo "<a href='iniciaoprof.html'><button type='button' class='btn-close' data-bs-dismiss='offcanvas' aria-label='Close'>Ir para a página inicial</button></a>";
+                                        // $voltar = "<a href= index.html><button>Ir para página inicial</button></a>";
+                                        // echo $voltar;
+                                    }else{
+                                        echo'<div class="alert alert-danger" role="alert">
+                                        Um erro ocorreu
+                                    </div>';
+                                    }
                                 }else{
                                     echo '<div class="alert alert-danger" role="alert">
                                     As senhas devem ser idênticas
@@ -76,7 +88,7 @@
                         <button type="submit" class="btn btn-outline-secondary btn-login">Redefinição</button>
                     </form>
                     <figure class="text-end" style="margin-top: 20px;">
-                        <a href="login.html" style="text-decoration: none;">
+                        <a href="login.php" style="text-decoration: none;">
                             <figcaption class="blockquote-footer">
                                 Voltar ao Login
                             </figcaption>

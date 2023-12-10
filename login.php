@@ -97,7 +97,7 @@
                   }else if($valor['senha'] !='123456' and password_verify($senha, $valor['senha'])  and $valor['TIPO']=="adm"){
                     $_SESSION['nome'] = $valor['NOME'];
                     $_SESSION['email'] = $valor['EMAIL'];
-                    header('Location: inicialprof.html');
+                    header('Location: iniciaoprof.html');
                     exit();
                   } else if(empty($_POST['email']) or empty($_POST['senha'])){
                      echo '<div class="alert alert-danger" role="alert">
@@ -127,7 +127,7 @@
                             <input type="password" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"placeholder="Digite sua senha" name="senha">                          </div>  -->
                     </div>
                     <figure class="text-end">
-                      <a href="redefinirsenha.php" style="text-decoration: none;">
+                      <a href="trocarsenha.php" style="text-decoration: none;">
                       <figcaption class="blockquote-footer">
                         <cite title="Source Title"> Esqueci a senha</cite>
                       </figcaption>
@@ -135,7 +135,7 @@
                     </figure>
                     <button type="submit" class="btn btn-outline-secondary btn-login" id="login" name="login">Login</button>
                     <figure class="text-end" style="margin-top: 20px;">
-                      <a href="cadastro.html" style="text-decoration: none;">
+                      <a href="cadastro.php" style="text-decoration: none;">
                       <figcaption class="blockquote-footer">
                         Não tenho conta<cite title="Source Title"> Realizar cadastro</cite>
                       </figcaption>
